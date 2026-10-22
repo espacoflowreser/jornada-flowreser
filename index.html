@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Flow.re.ser — 5 Dias para Destravar Sua Vida | Driellen Quirino</title>
+    <meta name="description" content="Saia do piloto automático e comece a construir uma vida que realmente faz sentido para você em 5 dias. Método prático com Vídeo, PDF e Áudio de Integração.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        areia: '#F7F4EF',
+                        amendoa: '#EDE6DC',
+                        expresso: '#231C18',
+                        carvao: '#2C2523',
+                        terracota: '#C86D51',
+                        terracotaDark: '#B05A3F',
+                        salvia: '#7A8B7B',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F7F4EF;
+            color: #2C2523;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .font-editorial {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .cta-btn {
+            background-color: #C86D51;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(200, 109, 81, 0.45);
+        }
+        .cta-btn:hover {
+            background-color: #B05A3F;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(200, 109, 81, 0.6);
+        }
+        @keyframes pulse-wave {
+            0%, 100% { height: 8px; }
+            50% { height: 24px; }
+        }
+        .wave-bar {
+            width: 3px;
+            background-color: #C86D51;
+            border-radius: 999px;
+            transition: height 0.2s ease;
+        }
+        .playing .wave-bar {
+            animation: pulse-wave 1s infinite ease-in-out;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracota selection:text-white">
+
+    <!-- ==========================================
+         BARRA DO GESTOR (APENAS PARA TESTES)
+    =========================================== -->
+    <div id="painel-gestor" class="bg-black text-white text-xs py-2.5 px-4 border-b border-neutral-800 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <strong class="uppercase tracking-wider text-[11px] text-amber-300">Painel de Teste (Edson):</strong>
+                <span id="status-delay" class="text-neutral-300">Botão liberado</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="simularDelay5s()" class="bg-neutral-800 hover:bg-neutral-700 text-white px-2.5 py-1 rounded border border-neutral-600 transition">
+                    ⏱️ Simular Delay VSL (5s)
+                </button>
+                <button onclick="liberarImediato()" class="bg-neutral-800 hover:bg-neutral-700 text-white px-2.5 py-1 rounded border border-neutral-600 transition">
+                    🔓 Mostrar Tudo Agora
+                </button>
+                <button onclick="alternarModoCego()" id="btn-modo-cego" class="bg-neutral-800 hover:bg-neutral-700 text-amber-300 px-2.5 py-1 rounded border border-neutral-600 transition">
+                    👁️ Esconder resto da página no Delay: OFF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         1. BARRA DE TOPO
+    =========================================== -->
+    <header class="bg-expresso text-areia py-3 px-4 border-b border-white/10">
+        <div class="max-w-5xl mx-auto flex items-center justify-between">
+            <div class="text-xs sm:text-sm tracking-widest uppercase font-medium">
+                JORNADA <span class="text-terracota font-semibold">FLOW.RE.SER</span> · 5 DIAS PARA DESTRAVAR SUA VIDA
+            </div>
+            <a href="#oferta" class="link-checkout hidden sm:inline-block bg-terracota hover:bg-terracotaDark text-white text-xs font-semibold uppercase tracking-wider px-4 py-2 rounded-full transition">
+                Começar Agora
+            </a>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         2. HERO SECTION + VSL CENTRALIZADA
+    =========================================== -->
+    <section class="py-12 sm:py-20 px-4 bg-areia">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="inline-block text-xs uppercase tracking-[0.2em] font-semibold text-terracota bg-amendoa px-4 py-1.5 rounded-full mb-5">
+                Método Prático em 5 Dias · Com Driellen Quirino
+            </span>
+            
+            <h1 class="text-4xl sm:text-6xl font-bold text-expresso leading-[1.12] mb-5">
+                Saia do piloto automático e destrave a sua vida em 5 dias.
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-carvao/90 font-medium mb-4">
+                Sem precisar jogar tudo para o alto. Com papel, caneta e 15 minutos por dia.
+            </p>
+
+            <p class="text-sm sm:text-base text-carvao/75 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Eu chegava a trabalhar 14 horas por dia no salão e achava que não tinha tempo nem para ser mãe. Nesta jornada, eu te mostro o passo a passo para olhar para a sua história, destravar os padrões que te paralisam e dar o primeiro passo real — sem sobrecarga e sem tentar mudar a vida inteira de uma vez.
+            </p>
+
+            <!-- CONTAINER DO PLAYER VSL -->
+            <div class="relative max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-amendoa bg-expresso aspect-video mb-3 group">
+                <!-- Caso queira substituir por iframe do Wistia/VTurb/YouTube, basta trocar a div abaixo pelo código <iframe> -->
+                <div id="vsl-mockup" onclick="iniciarPlayVSL()" class="w-full h-full flex flex-col items-center justify-center cursor-pointer relative bg-gradient-to-br from-expresso via-[#342822] to-expresso p-6 text-center">
+                    <div class="w-20 h-20 rounded-full bg-terracota/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition transform mb-4">
+                        <svg class="w-9 h-9 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                    <p class="font-editorial text-2xl sm:text-3xl text-areia italic mb-1">
+                        "Você não precisa mudar tudo hoje. Só precisa destravar o primeiro ponto."
+                    </p>
+                    <span class="text-xs uppercase tracking-widest text-areia/70 mt-2 bg-black/30 px-3 py-1 rounded-full">
+                        🔊 Clique para assistir à apresentação (3 min)
+                    </span>
+                    
+                    <!-- Barra de progresso simulada da VSL -->
+                    <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-white/10">
+                        <div id="vsl-progress" class="h-full bg-terracota w-0 transition-all duration-300"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-xs text-carvao/60 mb-8">
+                🔊 Verifique se o som do seu celular está ligado
+            </p>
+
+            <!-- CONTAINER DO BOTÃO COM DELAY -->
+            <div id="cta-vsl-container" class="transition-all duration-500">
+                <a href="https://pay.hotmart.com/SEU_CODIGO_AQUI" target="_blank" class="link-checkout cta-btn inline-block w-full sm:w-auto text-center font-bold text-base sm:text-lg uppercase tracking-wider px-10 py-5 rounded-full mb-6">
+                    Quero Começar Minha Jornada Agora →
+                </a>
+
+                <!-- 3 Pílulas de Destaque -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-medium text-carvao/80">
+                    <span class="bg-amendoa px-3.5 py-1.5 rounded-full">✓ 1 área por vez</span>
+                    <span class="bg-amendoa px-3.5 py-1.5 rounded-full">✓ 1º passo em 5 dias</span>
+                    <span class="bg-amendoa px-3.5 py-1.5 rounded-full">✓ Vídeo + PDF + Áudio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTAINER DO RESTO DA PÁGINA (Pode ficar visível ou oculto no modo Delay Cego) -->
+    <main id="conteudo-pos-delay">
+
+        <!-- ==========================================
+             3. QUEM ABRE A PORTA (HISTÓRIA DRIELLEN)
+        =========================================== -->
+        <section class="py-16 sm:py-24 px-4 bg-amendoa/70 border-y border-carvao/10">
+            <div class="max-w-4xl mx-auto grid md:grid-cols-12 gap-8 sm:gap-12 items-center">
+                <!-- Coluna Foto -->
+                <div class="md:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-4 border-areia bg-expresso aspect-[4/5] flex flex-col justify-end p-6 text-areia">
+                        <div class="absolute inset-0 bg-gradient-to-t from-expresso via-expresso/40 to-transparent"></div>
+                        <div class="relative z-10">
+                            <span class="text-xs uppercase tracking-widest text-terracota font-semibold block mb-1">Terapeuta & Criadora</span>
+                            <h3 class="text-2xl font-bold">Driellen Quirino</h3>
+                            <p class="text-xs text-areia/80">@driellencs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Texto -->
+                <div class="md:col-span-7">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">Quem abre a porta</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-expresso mb-6">Quem é a Driellen Quirino?</h2>
+                    
+                    <div class="space-y-4 text-carvao/85 leading-relaxed text-base">
+                        <p>
+                            Eu cresci vendo meus pais lutarem muito e aprendi, sem perceber, que conquista exigia exaustão. Como cabeleireira e dona de salão em plena pandemia, cheguei a trabalhar de <strong>12 a 14 horas por dia</strong>. Eu conquistava coisas, mas não tinha vida.
+                        </p>
+                        <p>
+                            Durante mais de 15 anos, achei que não queria ter filhos — porque, na minha cabeça, ser mãe significava viver sem tempo e no sacrifício constante.
+                        </p>
+                        <p>
+                            Quando comecei a investigar meus bloqueios e padrões na terapia, tudo mudou: <strong>dobrei meu faturamento trabalhando 8 horas por dia</strong>, construí um relacionamento saudável, abri espaço para viver a maternidade com presença e decidi me tornar terapeuta.
+                        </p>
+                        <p class="font-semibold text-expresso border-l-4 border-terracota pl-4 italic">
+                            Não estou aqui para te dar fórmulas mágicas. Estou aqui para te tirar de onde eu já estive: vivendo no automático, sobrecarregada e sem saber por onde começar a mudar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             4. A TRÍADE + POR DENTRO DA JORNADA
+        =========================================== -->
+        <section class="py-16 sm:py-24 px-4 bg-areia">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto mb-14">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">Por dentro do método</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-expresso mb-4">Veja a Jornada Flow.re.ser por dentro.</h2>
+                    <p class="text-carvao/75">
+                        Acesso imediato após a inscrição. Cada novo dia é liberado <strong>24 horas após concluir o anterior</strong> — feito para você refletir e agir no mundo real, não para acumular mais um curso na gaveta.
+                    </p>
+                </div>
+
+                <!-- A Tríade Diária -->
+                <div class="grid sm:grid-cols-3 gap-6 mb-14">
+                    <div class="bg-amendoa/60 p-6 rounded-2xl border border-carvao/10">
+                        <div class="w-10 h-10 rounded-full bg-terracota/15 text-terracota flex items-center justify-center font-bold mb-4">1</div>
+                        <h3 class="text-2xl font-bold text-expresso mb-2">Aula em Vídeo</h3>
+                        <p class="text-sm text-carvao/75">Conversas diretas na mesa, acolhedoras e sem enrolação para abrir sua percepção sobre o tema do dia.</p>
+                    </div>
+                    <div class="bg-amendoa/60 p-6 rounded-2xl border border-carvao/10">
+                        <div class="w-10 h-10 rounded-full bg-terracota/15 text-terracota flex items-center justify-center font-bold mb-4">2</div>
+                        <h3 class="text-2xl font-bold text-expresso mb-2">Atividade em PDF</h3>
+                        <p class="text-sm text-carvao/75">Papel e caneta na mão: perguntas terapêuticas direcionadas para tirar o caos da mente e trazer clareza.</p>
+                    </div>
+                    <div class="bg-amendoa/60 p-6 rounded-2xl border border-carvao/10">
+                        <div class="w-10 h-10 rounded-full bg-terracota/15 text-terracota flex items-center justify-center font-bold mb-4">3</div>
+                        <h3 class="text-2xl font-bold text-expresso mb-2">Áudio de Integração</h3>
+                        <p class="text-sm text-carvao/75 mb-4">Um momento guiado com fones de ouvido para aprofundar, acalmar e organizar o que você descobriu.</p>
+                        
+                        <!-- Mini Simulador Interativo de Áudio -->
+                        <button onclick="toggleAudioDemo(this)" class="w-full bg-areia px-3 py-2 rounded-xl border border-carvao/10 flex items-center justify-between text-xs font-semibold text-expresso hover:border-terracota transition">
+                            <span class="label-audio">▶ Ouvir prévia do clima</span>
+                            <div class="flex items-center gap-1 h-4">
+                                <span class="wave-bar h-2"></span>
+                                <span class="wave-bar h-3"></span>
+                                <span class="wave-bar h-1.5"></span>
+                                <span class="wave-bar h-3.5"></span>
+                                <span class="wave-bar h-2"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Os 6 Passos Numerados (Estilo P24) -->
+                <div class="mb-6">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">O que você recebe</span>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-expresso mb-8">Um só objetivo: tirar você da paralisia.</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">00</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Boas-vindas · A Regra de Ouro (1 área por vez)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Tentar mudar a vida inteira de uma vez gera sobrecarga e paralisia. Você vai escolher 1 ponto prioritário agora e terá 1 ano de acesso para repetir a jornada em outras áreas sempre que quiser.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">01</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Dia 1 · OLHAR (O fim do piloto automático)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Como pausar a correria e olhar para os pilares da sua vida sem julgamento e sem cobrança. Antes de mudar a direção, você precisa reconhecer onde está.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">02</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Dia 2 · INVESTIGAR (A raiz do que se repete)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Por que certas situações continuam acontecendo mesmo quando já te incomodam? Vamos identificar crenças, lealdades e padrões aprendidos que guiam suas escolhas.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">03</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Dia 3 · RESSIGNIFICAR (Quebrando verdades absolutas)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Sem positivismo tóxico: aprenda a separar o que aconteceu na sua história daquilo que precisa ser o seu futuro, abrindo espaço para caminhos mais inteligentes e leves.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">04</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Dia 4 · ESCOLHER (Que vida eu realmente quero construir?)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Saia do foco apenas no "que eu não aguento mais" para desenhar com honestidade a rotina, os sentimentos e as prioridades que fazem sentido para quem você é hoje.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/80 p-6 rounded-2xl border border-carvao/10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                        <span class="font-editorial text-4xl font-bold text-terracota shrink-0">05</span>
+                        <div>
+                            <h4 class="text-xl font-bold text-expresso">Dia 5 · CAMINHAR (Do papel para o primeiro passo concreto)</h4>
+                            <p class="text-sm text-carvao/75 mt-1">Um passo pequeno nunca é um passo inútil. Você vai encerrar a jornada transformando sua clareza em uma decisão prática, possível e com data marcada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             5. A DECISÃO (COMPARATIVO CONTRASTE ESCURO)
+        =========================================== -->
+        <section class="py-16 sm:py-24 px-4 bg-expresso text-areia">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">A decisão</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold">Quem conduz a sua rotina hoje?</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <!-- Lado Sem Método -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-2xl font-bold text-areia/70 mb-6 pb-3 border-b border-white/10">No Piloto Automático</h3>
+                        <ul class="space-y-4 text-sm sm:text-base text-areia/75">
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 font-bold">✕</span>
+                                <span>Tenta resolver todas as áreas da vida de uma vez e trava por sobrecarga.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 font-bold">✕</span>
+                                <span>Repete os mesmos padrões de cansaço, falta de tempo e autocobrança.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 font-bold">✕</span>
+                                <span>Sabe bem o que incomoda, mas não tem clareza do que quer construir no lugar.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-400 font-bold">✕</span>
+                                <span>Adia o cuidado consigo mesma para "quando a rotina acalmar" — de novo.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Lado Com Flow.re.ser -->
+                    <div class="bg-terracota/15 border-2 border-terracota rounded-2xl p-6 sm:p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6 pb-3 border-b border-terracota/30">Com a Jornada Flow.re.ser</h3>
+                        <ul class="space-y-4 text-sm sm:text-base text-areia">
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span>Isola 1 ponto específico da vida e avança com leveza em 5 dias.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span>Enxerga e questiona as crenças invisíveis que travavam suas escolhas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span>Tem um ritual guiado com Vídeo + Escrita em PDF + Áudio de Integração.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span>Sai do quinto dia com o primeiro passo concreto definido no papel.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#oferta" class="cta-btn inline-block font-bold text-base sm:text-lg uppercase tracking-wider px-10 py-5 rounded-full">
+                        Dar o Primeiro Passo Agora →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             6. ANCORAGEM DE PREÇO + CARD DE OFERTA
+        =========================================== -->
+        <section id="oferta" class="py-16 sm:py-24 px-4 bg-areia">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">Antes do preço, uma conta</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-expresso mb-6">Vamos combinar o que é caro.</h2>
+                    
+                    <div class="space-y-3 text-left max-w-xl mx-auto bg-amendoa/60 p-6 rounded-2xl border border-carvao/10 text-sm sm:text-base text-carvao/85">
+                        <p>• <strong>Caro</strong> é passar mais cinco anos vivendo no piloto automático e sentindo que a vida está passando pela janela.</p>
+                        <p>• <strong>Caro</strong> é continuar repetindo padrões que desgastam sua energia, seu trabalho e suas relações.</p>
+                        <p>• <strong>Caro</strong> é comprar cursos longos de 40 horas que você abandona na segunda aula porque não cabem na sua rotina.</p>
+                        <p class="pt-2 font-semibold text-expresso">Isso é caro. Eu não estou te pedindo meses de estudo — estou te pedindo 5 dias para olhar para você.</p>
+                    </div>
+                </div>
+
+                <!-- Card Principal de Checkout -->
+                <div class="bg-expresso text-areia rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-terracota">
+                    <div class="text-center border-b border-white/10 pb-6 mb-6">
+                        <span class="text-xs uppercase tracking-widest text-terracota font-bold">Inscrição com Acesso Imediato</span>
+                        <h3 class="text-3xl sm:text-4xl font-bold mt-1">Jornada Flow.re.ser Completa</h3>
+                    </div>
+
+                    <!-- Empilhamento de Valor -->
+                    <div class="space-y-3 text-sm sm:text-base mb-8">
+                        <div class="flex justify-between items-center py-2 border-b border-white/10">
+                            <span>✓ 5 Módulos Diários em Vídeo com Driellen Quirino</span>
+                            <span class="text-areia/50 line-through">R$ 197</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-white/10">
+                            <span>✓ Caderno de Atividades Práticas em PDF (5 Etapas)</span>
+                            <span class="text-areia/50 line-through">R$ 67</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-white/10">
+                            <span>✓ 5 Áudios Guiados de Integração Emocional</span>
+                            <span class="text-areia/50 line-through">R$ 97</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2 border-b border-white/10">
+                            <span>✓ 1 Ano de Acesso para refazer para outras áreas da vida</span>
+                            <span class="text-emerald-400 font-semibold">Incluso</span>
+                        </div>
+                    </div>
+
+                    <!-- Preço -->
+                    <div class="text-center mb-8">
+                        <p class="text-sm text-areia/60 line-through mb-1">De R$ 361,00 por apenas:</p>
+                        <div class="font-editorial text-5xl sm:text-6xl font-bold text-white mb-2">
+                            12x de R$ 9,68
+                        </div>
+                        <p class="text-sm text-areia/80">ou <strong>R$ 97,00 à vista</strong> no PIX ou cartão</p>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="https://pay.hotmart.com/SEU_CODIGO_AQUI" target="_blank" class="link-checkout cta-btn block w-full text-center font-bold text-lg uppercase tracking-wider py-5 rounded-full mb-4">
+                            Começar Minha Jornada Agora →
+                        </a>
+                        <p class="text-xs text-areia/60">
+                            🔒 Pagamento 100% Seguro processado pela Hotmart · Acesso enviado imediatamente ao seu e-mail.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Garantia 7 Dias -->
+                <div class="mt-8 bg-white/80 border border-carvao/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+                    <div class="w-16 h-16 rounded-full bg-salvia/20 text-salvia flex flex-col items-center justify-center shrink-0 font-bold border border-salvia/40">
+                        <span class="text-xl leading-none">7</span>
+                        <span class="text-[10px] uppercase tracking-wider">Dias</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-expresso">Garantia Incondicional · Risco Zero</h4>
+                        <p class="text-sm text-carvao/75 mt-1">
+                            Entre, assista às aulas e faça os exercícios em PDF. Se em até 7 dias você sentir que não é o seu momento, basta solicitar o reembolso direto na Hotmart e devolvemos 100% do seu investimento. Sem perguntas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             7. QUEBRA DE OBJEÇÕES (FAQ)
+        =========================================== -->
+        <section class="py-16 px-4 bg-amendoa/50 border-t border-carvao/10">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-10">
+                    <span class="text-xs uppercase tracking-[0.2em] text-terracota font-bold block mb-2">Antes de você me dizer que não</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-expresso">Perguntas que você talvez esteja fazendo</h2>
+                </div>
+
+                <div class="space-y-3">
+                    <details class="bg-areia rounded-xl p-5 border border-carvao/10 group cursor-pointer">
+                        <summary class="font-bold text-expresso flex justify-between items-center list-none">
+                            <span>"Minha rotina é muito corrida, não tenho tempo."</span>
+                            <span class="text-terracota group-open:rotate-45 transition transform text-xl">+</span>
+                        </summary>
+                        <p class="text-sm text-carvao/80 mt-3 leading-relaxed">
+                            São apenas 5 dias, levando cerca de 15 a 20 minutos por etapa. Além disso, o intervalo obrigatório de 24h entre os dias existe justamente para que você faça no seu ritmo, sem sobrecarga. Se hoje falta tempo até para olhar para você, esse é o maior sinal de que você precisa dessa pausa.
+                        </p>
+                    </details>
+
+                    <details class="bg-areia rounded-xl p-5 border border-carvao/10 group cursor-pointer">
+                        <summary class="font-bold text-expresso flex justify-between items-center list-none">
+                            <span>"E se eu quiser trabalhar mais de uma área da minha vida?"</span>
+                            <span class="text-terracota group-open:rotate-45 transition transform text-xl">+</span>
+                        </summary>
+                        <p class="text-sm text-carvao/80 mt-3 leading-relaxed">
+                            Você terá acesso completo por 1 ano! Nossa orientação é escolher apenas 1 ponto por vez (para não travar tentando mudar tudo junto). Assim que concluir seus 5 dias e der o primeiro passo naquela área, você pode voltar ao Dia 1 e refazer a jornada para o relacionamento, trabalho, maternidade ou finanças.
+                        </p>
+                    </details>
+
+                    <details class="bg-areia rounded-xl p-5 border border-carvao/10 group cursor-pointer">
+                        <summary class="font-bold text-expresso flex justify-between items-center list-none">
+                            <span>"A Jornada substitui o acompanhamento terapêutico?"</span>
+                            <span class="text-terracota group-open:rotate-45 transition transform text-xl">+</span>
+                        </summary>
+                        <p class="text-sm text-carvao/80 mt-3 leading-relaxed">
+                            Não. A Jornada Flow.re.ser é uma ferramenta estruturada e educativa de autoconhecimento e clareza prática. Ela funciona perfeitamente tanto para quem nunca fez terapia e quer dar um primeiro passo seguro quanto para quem já faz terapia e deseja destravar uma questão pontual.
+                        </p>
+                    </details>
+
+                    <details class="bg-areia rounded-xl p-5 border border-carvao/10 group cursor-pointer">
+                        <summary class="font-bold text-expresso flex justify-between items-center list-none">
+                            <span>"Como recebo o acesso aos vídeos, PDFs e áudios?"</span>
+                            <span class="text-terracota group-open:rotate-45 transition transform text-xl">+</span>
+                        </summary>
+                        <p class="text-sm text-carvao/80 mt-3 leading-relaxed">
+                            Assim que o pagamento for confirmado (no PIX ou Cartão é imediato), você recebe um e-mail oficial da Hotmart com o link para entrar na área de membros pelo celular ou computador.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="py-10 px-4 bg-expresso text-areia/60 text-center text-xs">
+            <div class="max-w-3xl mx-auto space-y-2">
+                <p class="font-semibold text-areia">Jornada Flow.re.ser · Driellen Quirino (@driellencs)</p>
+                <p>Conteúdo educativo e de desenvolvimento pessoal. Resultados variam de acordo com a dedicação individual aos exercícios propostos.</p>
+                <p>© Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ==========================================
+         CONFIGURAÇÃO RÁPIDA E SCRIPTS DE DELAY
+    =========================================== -->
+    <script>
+        /**
+         * CONFIGURAÇÃO PRINCIPAL (EDSON)
+         * Quando for publicar oficialmente:
+         * 1. Troque LINK_CHECKOUT_HOTMART pelo seu link real da Hotmart.
+         * 2. Defina TEMPO_DELAY_SEGUNDOS (ex: 150 para 2m30s, ou 0 para mostrar o botão desde o início).
+         * 3. Mude MOSTRAR_PAINEL_GESTOR para false para ocultar a barra preta do topo.
+         */
+        const CONFIG = {
+            TEMPO_DELAY_SEGUNDOS: 0, 
+            LINK_CHECKOUT_HOTMART: "https://pay.hotmart.com/SEU_CODIGO_AQUI",
+            OCULTAR_RESTO_DA_PAGINA_NO_DELAY: false,
+            MOSTRAR_PAINEL_GESTOR: true
+        };
+
+        let timerDelay = null;
+        let intervaloProgresso = null;
+
+        function inicializarPagina() {
+            // Atualiza todos os botões com o link da Hotmart
+            document.querySelectorAll('.link-checkout').forEach(link => {
+                if (link.getAttribute('href') !== '#oferta') {
+                    link.setAttribute('href', CONFIG.LINK_CHECKOUT_HOTMART);
+                }
+            });
+
+            // Controla visibilidade do painel de teste do gestor
+            const painel = document.getElementById('painel-gestor');
+            if (!CONFIG.MOSTRAR_PAINEL_GESTOR && painel) {
+                painel.style.display = 'none';
+            }
+
+            // Se tiver tempo de delay configurado, inicia oculto
+            if (CONFIG.TEMPO_DELAY_SEGUNDOS > 0) {
+                aplicarDelay(CONFIG.TEMPO_DELAY_SEGUNDOS);
+            }
+        }
+
+        function aplicarDelay(segundos) {
+            clearTimeout(timerDelay);
+            clearInterval(intervaloProgresso);
+
+            const ctaContainer = document.getElementById('cta-vsl-container');
+            const restoPagina = document.getElementById('conteudo-pos-delay');
+            const statusTxt = document.getElementById('status-delay');
+            const barraProgresso = document.getElementById('vsl-progress');
+
+            ctaContainer.classList.add('hidden');
+            if (CONFIG.OCULTAR_RESTO_DA_PAGINA_NO_DELAY) {
+                restoPagina.classList.add('hidden');
+            }
+
+            let restante = segundos;
+            if (statusTxt) statusTxt.textContent = `Aguardando VSL (${restante}s)...`;
+
+            intervaloProgresso = setInterval(() => {
+                restante--;
+                const pct = ((segundos - restante) / segundos) * 100;
+                if (barraProgresso) barraProgresso.style.width = `${pct}%`;
+
+                if (restante > 0) {
+                    if (statusTxt) statusTxt.textContent = `Aguardando VSL (${restante}s)...`;
+                } else {
+                    clearInterval(intervaloProgresso);
+                }
+            }, 1000);
+
+            timerDelay = setTimeout(() => {
+                liberarImediato();
+            }, segundos * 1000);
+        }
+
+        function liberarImediato() {
+            clearTimeout(timerDelay);
+            clearInterval(intervaloProgresso);
+
+            const ctaContainer = document.getElementById('cta-vsl-container');
+            const restoPagina = document.getElementById('conteudo-pos-delay');
+            const statusTxt = document.getElementById('status-delay');
+            const barraProgresso = document.getElementById('vsl-progress');
+
+            ctaContainer.classList.remove('hidden');
+            ctaContainer.classList.add('fade-in-up');
+            restoPagina.classList.remove('hidden');
+
+            if (barraProgresso) barraProgresso.style.width = '100%';
+            if (statusTxt) statusTxt.textContent = 'Botão liberado na tela!';
+        }
+
+        function simularDelay5s() {
+            aplicarDelay(5);
+        }
+
+        function alternarModoCego() {
+            CONFIG.OCULTAR_RESTO_DA_PAGINA_NO_DELAY = !CONFIG.OCULTAR_RESTO_DA_PAGINA_NO_DELAY;
+            const btn = document.getElementById('btn-modo-cego');
+            btn.textContent = `👁️ Esconder resto da página no Delay: ${CONFIG.OCULTAR_RESTO_DA_PAGINA_NO_DELAY ? 'ON' : 'OFF'}`;
+            simularDelay5s();
+        }
+
+        function iniciarPlayVSL() {
+            const box = document.getElementById('vsl-mockup');
+            box.innerHTML = `
+                <div class="p-6 text-center">
+                    <div class="inline-block w-3 h-3 rounded-full bg-terracota animate-ping mb-3"></div>
+                    <p class="font-editorial text-2xl sm:text-3xl text-areia mb-2">Simulação da VSL da Driellen em andamento...</p>
+                    <p class="text-xs text-areia/70 max-w-md mx-auto">
+                        Aqui entrará o vídeo real da Driellen (via Wistia, VTurb ou MP4 direto). Quando bater o minuto configurado, o botão laranja-terracota surge automaticamente abaixo.
+                    </p>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-white/10">
+                    <div id="vsl-progress" class="h-full bg-terracota w-1/3 transition-all duration-300"></div>
+                </div>
+            `;
+        }
+
+        function toggleAudioDemo(btn) {
+            btn.classList.toggle('playing');
+            const label = btn.querySelector('.label-audio');
+            if (btn.classList.contains('playing')) {
+                label.textContent = '⏸ Tocando atmosfera de integração...';
+            } else {
+                label.textContent = '▶ Ouvir prévia do clima';
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', inicializarPagina);
+    </script>
+</body>
+</html>
